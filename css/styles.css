@@ -1,0 +1,56 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+
+  background-color: #273527;
+  padding: 2rem 3rem;   /* scales naturally */
+  font-size: 1.75rem;   /* overall scale control */
+}
+
+/* Branding */
+.nav-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.nav-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.nav-title {
+  font-size: 0.9rem;
+  color: #c0c0c0;
+}
+
+/* Push links to center */
+.nav-links {
+  display: flex;
+  gap: 3rem;
+  margin: 0 auto;   /* THIS is the key */
+}
+/* Link styling */
+.nav-link {
+  color: #c0c0c0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: normal;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+/* Active page */
+.nav-link.active {
+  font-weight: bold;
+  color: white;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
