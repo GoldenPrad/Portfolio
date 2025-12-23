@@ -87,3 +87,35 @@ projects.push({
   demo: "...",
   tags: ["Python", "ML"]
 });
+
+// EXPERIENCE
+
+const experiences = [
+  {
+    title: "Software Engineering Intern – Company Name",
+    time: "Jun 2024 – Aug 2024",
+    description:
+      "Worked on backend services in Python and Java, improved system reliability, and collaborated with cross-functional teams."
+  }
+];
+
+function createExperienceCard(exp) {
+  const card = document.createElement("div");
+  card.className = "experience-card";
+
+  card.innerHTML = `
+    <div class="experience-header">
+      <h3>${exp.title}</h3>
+      <span>${exp.time}</span>
+    </div>
+    <p>${exp.description}</p>
+  `;
+
+  return card;
+}
+
+const experienceSection = document.getElementById("experience");
+
+experiences.forEach(exp => {
+  experienceSection.appendChild(createExperienceCard(exp));
+});

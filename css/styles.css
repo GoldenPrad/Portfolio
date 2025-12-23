@@ -193,7 +193,7 @@ body {
 }
 
 .projects-header {
-  /* max-width: 1200px; */
+  /* max-width: 10vw; */
   margin: 4rem auto 3rem auto;
   padding: 2rem 2.5rem;
 
@@ -287,4 +287,76 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+
+
+/* ---------- Experience Section ---------- */
+.experience-section {
+  max-width: 90vw;
+  margin: 4rem auto;
+  padding: 0 1.25rem;
+}
+
+/* ---------- Experience Card ---------- */
+.experience-card {
+  background: rgba(79, 93, 74, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+
+  padding: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+/* ---------- Header Row ---------- */
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.experience-header h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.experience-header span {
+  font-size: 0.9rem;
+  color: #bfc3bf;
+}
+
+/* ---------- Description ---------- */
+.experience-card p {
+  margin: 0;
+  line-height: 1.6;
+  color: #bfc3bf;
+}
+
+.experience-header-box {
+  /* max-width: 1400px; */
+  margin: 4rem auto 2rem auto;
+  padding: 2rem 2.5rem;
+
+  background: #273527;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+
+
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 0.75rem;
+  justify-content: space-between;
+}
+
+.experience-header-box h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.experience-header-box span {
+  font-size: 0.95rem;
+  color: #bfc3bf;
 }
