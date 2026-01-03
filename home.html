@@ -21,8 +21,8 @@
 
     <div class="nav-links">
       <a href="home.html" class="nav-link active">Home</a>
-      <a href="projects.html" class="nav-link">Projects</a>
-      <a href="experience.html" class="nav-link">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
       <a href="blog.html" class="nav-link">Blog</a>
       <a href="thoughts.html" class="nav-link">Thoughts</a>
     </div>
@@ -49,25 +49,74 @@
     <div class="about-container">
       
       <div class="about-text">
-        <h1>About Me</h1>
+        <h1>Welcome to Prad's Portfolio</h1>
         <p>
-          I am an Electrical and Computer Engineering student at Princeton University
-          with interests in software development, systems, and applied machine learning.
-          I enjoy building clean, scalable tools and learning how things work from first principles.
+          Hi! I’m Prad, an Electrical and Computer Engineering undergraduate at Princeton University with experience in
+          software engineering, product-focused development, and applied research environments.
         </p>
 
         <p>
-          Currently, I’m focused on developing my skills through coursework, personal projects,
-          and real-world experience.
+          I’m interested in building reliable, well-structured systems across the software–hardware stack, from
+          backend and full-stack applications to ML-driven and embedded engineering workflows.
         </p>
+        <h4>Current Interests</h4>
+        <ul>
+          <li>Software engineering and product deployment</li>
+          <li>Systems-oriented and full-stack development</li>
+          <li>Applied machine learning and research-driven engineering</li>
+          <li>ECE projects spanning hardware–software integration</li>
+        </ul>
       </div>
 
       <div class="about-links">
-        <a href="assets/resume.pdf" target="_blank">Resume</a>
-        <a href="https://github.com/GoldenPrad" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/pradnesh-thoppay" target="_blank">LinkedIn</a>
-        <a href="mailto:pradthoppay@gmail.com">Email</a>
+        <div class="about-tabs">
+          <button class="about-tab active" data-tab="links">Links</button>
+          <button class="about-tab" data-tab="coursework">Coursework</button>
+        </div>
+
+        <div class="about-tab-content active" id="links">
+          <a href="assets/resume.pdf" target="_blank">Resume</a>
+          <a href="https://github.com/GoldenPrad" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/pradnesh-thoppay" target="_blank">LinkedIn</a>
+          <a href="mailto:pradthoppay@gmail.com">Email</a>
+        </div>
+
+        <div class="about-tab-content" id="coursework">
+          <div class="course-group">
+            <h5>Computer Science</h5>
+            <ul>
+              <li>Algorithms and Data Structures</li>
+              <li>Computer Science: An Interdisciplinary Study</li>
+            </ul>
+          </div>
+
+          <div class="course-group">
+            <h5>Mathematics</h5>
+            <ul>
+              <li>Multivariable Calculus</li>
+              <li>Linear Algebra with Applications</li>
+              <li>Statistics and Data Analysis for Economics</li>
+            </ul>
+          </div>
+
+          <div class="course-group">
+            <h5>Science</h5>
+            <ul>
+              <li>General Physics I</li>
+              <li>General Physics II</li>
+            </ul>
+          </div>
+
+          <div class="course-group">
+            <h5>Liberal Arts</h5>
+            <ul>
+              <li>Teaching Computers to Understand African Languages</li>
+              <li>Writing Seminar: Digging into the Garden State</li>
+            </ul>
+          </div>
+        </div>
       </div>
+
 
     </div>
   </section>
@@ -82,14 +131,19 @@
       <!-- Project cards go here (via JS) -->
     </div>
   </section>
+ 
+  
+  
 
-  <div class="experience-header-box">
-    <h2>Experience</h2>
-    <span>industry and research internships</span>
-  </div>
+  <section id="experience">
+    <div class="experience-header-box">
+      <h2>Experience</h2>
+      <span>industry and research internships</span>
+    </div>
 
-  <section id="experience" class="experience-section">
-    <!-- Experience cards injected by JS -->
+    <div class = "experience-section">
+      <!-- Experience cards injected by JS -->
+    </div>
   </section>
 
   <!-- <section id="experience" class="experience-section">

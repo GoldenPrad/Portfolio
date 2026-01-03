@@ -2,6 +2,7 @@ const projects = [
   {
     title: "Personal Website",
     status: "ACTIVE",
+    date: "Aug 2024",
     description: "A personal portfolio website built with HTML, CSS, and JavaScript.",
     image: "assets/images/website.png",
     repo: "https://github.com/yourusername/website",
@@ -11,6 +12,7 @@ const projects = [
   {
     title: "Another Project",
     status: "IN PROGRESS",
+    date: "Aug 2024",
     description: "...",
     image: "...",
     repo: "...",
@@ -20,6 +22,7 @@ const projects = [
   {
     title: "Another Project",
     status: "IN PROGRESS",
+    date: "Aug 2024",
     description: "...",
     image: "...",
     repo: "...",
@@ -29,6 +32,7 @@ const projects = [
   {
     title: "Another Project",
     status: "IN PROGRESS",
+    date: "Aug 2024",
     description: "...",
     image: "...",
     repo: "...",
@@ -42,6 +46,7 @@ function createProjectCard(project) {
   card.className = "project-card";
 
   card.innerHTML = `
+    
     <div class="project-image">
       <img src="${project.image}" alt="${project.title}">
     </div>
@@ -118,4 +123,19 @@ const experienceSection = document.getElementById("experience");
 
 experiences.forEach(exp => {
   experienceSection.appendChild(createExperienceCard(exp));
+});
+
+
+// About Links/Course work switching
+const aboutTabs = document.querySelectorAll(".about-tab");
+const aboutContents = document.querySelectorAll(".about-tab-content");
+
+aboutTabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    aboutTabs.forEach(t => t.classList.remove("active"));
+    aboutContents.forEach(c => c.classList.remove("active"));
+
+    tab.classList.add("active");
+    document.getElementById(tab.dataset.tab).classList.add("active");
+  });
 });

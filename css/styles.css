@@ -6,7 +6,17 @@
   background-color: #273527;
   padding: 2rem 3rem;   /* scales naturally */
   font-size: 1.75rem;   /* overall scale control */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 /* Branding */
 .nav-brand {
@@ -37,7 +47,7 @@
   color: #c0c0c0;
   text-decoration: none;
   font-size: 1.1rem;
-  font-weight: normal;
+  font-weight: bold;
   transition: color 0.2s ease;
 }
 
@@ -47,7 +57,7 @@
 
 /* Active page */
 .nav-link.active {
-  font-weight: bold;
+  /* font-weight: bold; */
   color: white;
 }
 
@@ -55,21 +65,38 @@ body {
   font-family: "Inter", sans-serif; /*Font*/
   background-color: #1b1c1b; /*Font*/
 }
+.navbar a,
+.navbar a:link,
+.navbar a:visited,
+.navbar a:hover,
+.navbar a:active,
+.navbar a:focus {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: #bfc3bf;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #ffffff;
+}
+
 
 /*---- ABOUT SECTION ---- */
 
 .about-section {
-  padding: 6rem 3rem;
+  padding: 3rem 3rem 0rem;
+  padding-top: 150px; /* match navbar height */
 }
 
 .about-container {
   display: flex;
-  gap: 4rem;
+  gap: 2rem;
   max-width: 150vw;
   width: 100%;
   margin: 0 auto;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+
 }
 
 /* Left: About text (2/3) */
@@ -80,17 +107,53 @@ body {
 .about-text h1 {
   font-size: 2.2rem;
   margin-bottom: 1.5rem;
-  color: #cbd5e1;
+  color: #aab3aa;
 }
 
 .about-text p {
   font-size: 1.05rem;
   line-height: 1.6;
   margin-bottom: 1.2rem;
-  color: #cbd5e1;
+  color: #cfd3cf;
+}
+
+/* Interests Header */
+.about-text h4 {
+  margin-top: 3rem;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #aab3aa;
+}
+
+/* Interests List */
+.about-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-text li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #cfd3cf;
+}
+
+.about-text li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #8fa58f;
 }
 
 /* Right: Links (1/3) */
+.about-links h1 {
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+  color: #cbd5e1;
+}
 .about-links {
   flex: 1;
   display: flex;
@@ -100,7 +163,7 @@ body {
 
 .about-links a {
   text-decoration: none;
-  color: #cbd5e1;
+  color: #cfd3cf;
   font-weight: 600;
   font-size: 1rem;
 }
@@ -118,6 +181,73 @@ body {
   border-radius: 6px; /* sharp corners */
 }
 
+/* ---------- About Tabs ---------- */
+.about-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.about-tab {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #aab3aa;
+  cursor: pointer;
+}
+
+.about-tab.active {
+  color: #ffffff;
+  border-bottom: 2px solid #8fa58f;
+}
+
+/* ---------- Tab Content ---------- */
+.about-tab-content {
+  display: none;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.about-tab-content.active {
+  display: flex;
+}
+/* ---------- Coursework Formatting ---------- */
+.course-group {
+  margin-bottom: 1.25rem;
+}
+
+.course-group h5 {
+  margin: 0 0 0.4rem 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8fa58f;
+}
+
+.course-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.course-group li {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.95rem;
+  color: #cfd3cf;
+  margin-bottom: 0.35rem;
+}
+
+.course-group li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: #8fa58f;
+}
+
+
 /* ---------- PROJECTS ---------- */
 .projects-grid {
   display: grid;
@@ -128,6 +258,7 @@ body {
   margin: 0 auto;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+  margin-top: 2.5rem;
 }
 
 /* ---- Color Theme Variables -- */
@@ -155,6 +286,19 @@ body {
   height: 100%;
   width: 100%;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+
+.project-date {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.35rem 0.6rem;
+  background: rgba(0, 0, 0, 0.45);
+  color: #ffffff;
+  border-radius: 4px;
 }
 
 .project-card:hover {
@@ -290,64 +434,25 @@ body {
 }
 
 
-/* ---------- Experience Section ---------- */
-.experience-section {
-  max-width: 90vw;
-  margin: 4rem auto;
-  padding: 0 1.25rem;
+/* ---------- Experience Section Wrapper ---------- */
+#experience {
+  margin: 4rem 0;
 }
 
-/* ---------- Experience Card ---------- */
-.experience-card {
-  background: rgba(79, 93, 74, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 6px;
-
-  padding: 2rem;
-  margin-bottom: 1.25rem;
-}
-
-/* ---------- Header Row ---------- */
-.experience-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.experience-header h3 {
-  margin: 0;
-  color: #ffffff;
-  font-size: 1.2rem;
-}
-
-.experience-header span {
-  font-size: 0.9rem;
-  color: #bfc3bf;
-}
-
-/* ---------- Description ---------- */
-.experience-card p {
-  margin: 0;
-  line-height: 1.6;
-  color: #bfc3bf;
-}
-
+/* ---------- Experience Header Box ---------- */
 .experience-header-box {
-  /* max-width: 1400px; */
-  margin: 4rem auto 2rem auto;
+  
+  
+  margin: 0 auto 1.5rem auto;
   padding: 2rem 2.5rem;
 
   background: #273527;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 4px;
 
-
   display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 0.75rem;
   justify-content: space-between;
+  align-items: center;
 }
 
 .experience-header-box h2 {
@@ -358,5 +463,50 @@ body {
 
 .experience-header-box span {
   font-size: 0.95rem;
+  color: #bfc3bf;
+}
+
+/* ---------- Cards Container ---------- */
+.experience-section {
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+/* ---------- Individual Experience Card ---------- */
+.experience-card {
+  background: rgba(79, 93, 74, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+
+  padding: 2rem;
+  margin-bottom: 1.25rem;
+  max-width: 85vw;
+  margin: 0 auto 1.25rem auto;
+
+}
+
+/* ---------- Card Header Row ---------- */
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.experience-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.experience-header span {
+  font-size: 0.9rem;
+  color: #bfc3bf;
+}
+
+/* ---------- Card Description ---------- */
+.experience-card p {
+  margin: 0;
+  line-height: 1.6;
   color: #bfc3bf;
 }
