@@ -365,7 +365,7 @@ body {
 }
 
 .project-header h3 {
-  color: #cbd5e1;
+  color: #cfd3cf;
   font-size: 1.1rem;
   font-weight: 600;
   margin: 0;
@@ -383,16 +383,17 @@ body {
 .project-description {
   font-size: 0.9rem;
   line-height: 1.5;
-  color: #cbd5e1;
+  color: #cfd3cf;
   margin-bottom: 1.25rem;
 }
 
 .project-buttons {
-  color: var(--white);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* always two equal slots */
   gap: 0.75rem;
   margin-top: auto;
 }
+
 
 .project-buttons a {
   flex: 1;
@@ -405,7 +406,7 @@ body {
   text-decoration: none;
 
   background: rgba(255, 255, 255, 0.08);
-  color: #e5e7eb;
+  color: #cfd3cf;
 
   transition: background 0.2s ease, color 0.2s ease;
 }
@@ -413,6 +414,26 @@ body {
 .project-buttons a:hover {
   background: var(--olive-mid);
   color: #ffffff;
+}
+
+/* Disabled / Private Repo Button */
+.repo-disabled {
+  flex: 1;
+  text-align: center;
+  padding: 0.55rem 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #9aa19a;
+  background: transparent;
+
+  cursor: default;
+}
+
+.button-placeholder {
+  visibility: hidden;
 }
 
 
@@ -509,4 +530,16 @@ body {
   margin: 0;
   line-height: 1.6;
   color: #bfc3bf;
+}
+
+.experience-bullets {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.experience-bullets li {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+  color: #cfd3cf;
+  font-size: 0.95rem;
 }
