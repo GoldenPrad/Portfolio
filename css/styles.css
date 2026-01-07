@@ -64,6 +64,7 @@ html {
 body {
   font-family: "Inter", sans-serif; /*Font*/
   background-color: #1b1c1b; /*Font*/
+  background-color: #1b1c1b; /*Font*/
 }
 .navbar a,
 .navbar a:link,
@@ -80,6 +81,15 @@ body {
 
 .navbar a:hover {
   color: #ffffff;
+}
+
+:root {
+  --nav-height: 0px;
+}
+
+#projects,
+#experience {
+  scroll-margin-top: calc(var(--nav-height) + 1rem);
 }
 
 
@@ -168,9 +178,39 @@ body {
   font-size: 1rem;
 }
 
-.about-links a:hover {
-  color: white;
+
+/* ---------- Links Formatting ---------- */
+.link-row {
+  display: flex;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  color: #cbd5e1;
 }
+
+/* Labels: bold */
+.link-label {
+  color: #cbd5e1;
+  font-weight: 700;
+}
+
+/* Links: normal weight + dotted underline */
+.link-row a {
+  color: #cbd5e1;
+  font-weight: 500;
+  text-decoration: underline;
+  /* text-decoration-style: dotted; */
+  text-underline-offset: 3px;
+}
+
+.link-row a:hover {
+  color: #ffffff;
+}
+
+.link-text {
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
 
 /* Box styling for About + Contact */
 .about-text,
@@ -180,6 +220,103 @@ body {
   padding: 2rem;
   border-radius: 6px; /* sharp corners */
 }
+
+
+/* Copy button */
+.copy-btn {
+  margin-left: auto; /* pushes icon to the right */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  opacity: 0.6;
+  color: #cbd5e1;
+}
+
+.copy-btn:hover {
+  opacity: 1;
+  color: #ffffff;
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.copy-icon {
+  width: 1rem;
+  height: 1rem;
+  fill: #cbd5e1; /* icon color */
+  transition: fill 0.2s ease;
+}
+
+.copy-btn:hover .copy-icon {
+  fill: #ffffff;
+}
+
+
+/* Toast notification */
+.copy-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 0.6rem 0.9rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+.copy-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#toast-container {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  width: min(60vw, 14rem); /* responsive, caps width */
+  z-index: 9999;
+}
+
+.toast {
+  width: 100%; /* all toasts same width */
+  box-sizing: border-box;
+
+  background: rgba(30, 30, 30, 0.97);
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+
+  font-size: 0.85rem; 
+  opacity: 50;
+  transform: translateY(8px);
+  animation: toast-in 0.25s ease forwards;
+}
+
+
+@keyframes toast-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 /* ---------- About Tabs ---------- */
 .about-tabs {

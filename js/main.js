@@ -7,7 +7,7 @@ const projects = [
     image: "assets/images/outfit.png",
     repo: "",
     repoPrivate: true,   // true → private repo styling
-    demo: "",  // empty string or null → no demo button  
+    demo: "",  // empty string or null → no demo button 
     tags: ["Python", "Computer Vision", "Machine Learning"]
   },  
   {
@@ -182,3 +182,52 @@ aboutTabs.forEach(tab => {
     document.getElementById(tab.dataset.tab).classList.add("active");
   });
 });
+
+// Nav Bar Scrolling Anchoring
+const nav = document.querySelector("nav");
+
+function setNavHeight() {
+  document.documentElement.style.setProperty(
+    "--nav-height",
+    `${nav.offsetHeight}px`
+  );
+}
+
+window.addEventListener("load", setNavHeight);
+window.addEventListener("resize", setNavHeight);
+
+
+// Clipboard Copy + Notification
+document.querySelectorAll(".copy-btn").forEach(button => {
+  button.addEventListener("click", () => {
+    const valueEl = button.parentElement.querySelector(".link-value");
+    const textToCopy = valueEl.dataset.copy;
+    const label = button.dataset.label;
+
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      showToast(`${label} copied to clipboard`);
+    });
+  });
+});
+
+
+function showToast(message) {
+  const container = document.getElementById("toast-container");
+
+  const toast = document.createElement("div");
+  toast.className = "toast";
+  toast.textContent = message;
+
+  container.appendChild(toast);
+
+  setTimeout(() => {
+    toast.style.opacity = "0";
+    toast.style.transform = "translateY(8px)";
+    toast.style.transition = "opacity 0.25s ease, transform 0.25s ease";
+
+    setTimeout(() => {
+      toast.remove();
+    }, 250);
+  }, 1600);
+}
+

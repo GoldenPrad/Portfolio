@@ -58,64 +58,115 @@
         <p>
           I’m especially interested in machine learning and computer vision, and in building systems where software and electronics come together.
           I enjoy working across the stack, from programming devices like Arduino and ESP32-based receivers, to developing machine learning models, 
-          to creating art for frontend design. I also have a strong interest in software engineering more broadly, particularly in writing reliable, 
-          well-structured code that scales beyond small projects.
+          to creating art for frontend design. I also have a strong interest in software engineering more broadly, developing practical products
+          designed with real users in mind.
         </p>
         <h4>Current Interests</h4>
         <ul>
           <li>Machine learning and computer vision applications</li>
           <li>Embedded systems and electronic hardware–software integration </li>
           <li>Research-driven and data-centric engineering </li>
-          <li>Software engineering and product deployment</li>
+          <li>Software engineering and product development</li>
         </ul>
       </div>
 
       <div class="about-links">
         <div class="about-tabs">
-          <button class="about-tab active" data-tab="links">Links</button>
+          <button class="about-tab active" data-tab="links">Connect</button>
           <button class="about-tab" data-tab="coursework">Coursework</button>
         </div>
 
-        <div class="about-tab-content active" id="links">
-          <a href="assets/resume.pdf" target="_blank">Resume</a>
-          <a href="https://github.com/GoldenPrad" target="_blank">GitHub</a>
-          <a href="https://linkedin.com/in/pradnesh-thoppay" target="_blank">LinkedIn</a>
-          <a href="mailto:pradthoppay@gmail.com">Email</a>
+      <div class="about-tab-content active" id="links">
+        <!-- <div class="link-row">
+          <span class="link-label">Resume:</span>
+          <a href="assets/website-resume-v2.pdf" target="_blank">PDF</a>
+        </div> -->
+
+        <div class="link-row">
+          <span class="link-label">GitHub:</span>
+          <a
+            href="https://github.com/GoldenPrad"
+            target="_blank"
+            class="link-value"
+            data-copy="https://github.com/GoldenPrad"
+          >
+            GoldenPrad
+          </a>
+          <button class="copy-btn" data-label="GitHub" aria-label="Copy GitHub">
+            <svg viewBox="0 0 24 24" class="copy-icon" aria-hidden="true">
+              <path d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
+            </svg>
+          </button>
         </div>
 
-        <div class="about-tab-content" id="coursework">
-          <div class="course-group">
-            <h5>Computer Science</h5>
-            <ul>
-              <li>Computer Science: An Interdisciplinary Study</li>
-              <li>Algorithms and Data Structures</li>
-            </ul>
-          </div>
+        <div class="link-row">
+          <span class="link-label">LinkedIn:</span>
+          <a
+            href="https://linkedin.com/in/pradnesh-thoppay"
+            target="_blank"
+            class="link-value"
+            data-copy="https://linkedin.com/in/pradnesh-thoppay"
+          >
+            /in/pradnesh-thoppay
+          </a>
+          <button class="copy-btn" data-label="LinkedIn" aria-label="Copy LinkedIn">
+            <svg viewBox="0 0 24 24" class="copy-icon" aria-hidden="true">
+              <path d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
+            </svg>
+          </button>
+        </div>
 
-          <div class="course-group">
-            <h5>Mathematics</h5>
-            <ul>
-              <li>Multivariable Calculus</li>
-              <li>Linear Algebra with Applications</li>
-              <li>Statistics and Data Analysis for Economics</li>
-            </ul>
-          </div>
+        <div class="link-row">
+          <span class="link-label">Email:</span>
+          <span
+            class="link-value"
+            data-copy="pt3969@princeton.edu"
+          >
+            pt3969@princeton.edu
+          </span>
+          <button class="copy-btn" data-label="Email" aria-label="Copy Email">
+            <svg viewBox="0 0 24 24" class="copy-icon" aria-hidden="true">
+              <path d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
+            </svg>
+          </button>
+        </div>
 
-          <div class="course-group">
-            <h5>Science</h5>
-            <ul>
-              <li>General Physics I</li>
-              <li>General Physics II</li>
-            </ul>
-          </div>
+      </div>
 
-          <div class="course-group">
-            <h5>Liberal Arts</h5>
-            <ul>
-              <li>Teaching Computers to Understand African Languages</li>
-              <li>Writing Seminar: Digging into the Garden State</li>
-            </ul>
-          </div>
+      <div id="toast-container"></div>
+
+      <div class="about-tab-content" id="coursework">
+        <div class="course-group">
+          <h5>Computer Science</h5>
+          <ul>
+            <li>Computer Science: An Interdisciplinary Study</li>
+            <li>Algorithms and Data Structures</li>
+          </ul>
+        </div>
+
+        <div class="course-group">
+          <h5>Mathematics</h5>
+          <ul>
+            <li>Multivariable Calculus</li>
+            <li>Linear Algebra with Applications</li>
+            <li>Statistics and Data Analysis for Economics</li>
+          </ul>
+        </div>
+
+        <div class="course-group">
+          <h5>Science</h5>
+          <ul>
+            <li>General Physics I</li>
+            <li>General Physics II</li>
+          </ul>
+        </div>
+
+        <div class="course-group">
+          <h5>Liberal Arts</h5>
+          <ul>
+            <li>Teaching Computers to Understand African Languages</li>
+            <li>Writing Seminar: Digging into the Garden State</li>
+          </ul>
         </div>
       </div>
 
