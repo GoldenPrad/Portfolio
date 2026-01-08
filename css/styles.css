@@ -1,3 +1,8 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #1b1c1b; 
+}
+
 /* ---- NAVBAR ----*/
 .navbar {
   display: flex;
@@ -61,11 +66,8 @@ html {
   color: white;
 }
 
-body {
-  font-family: "Inter", sans-serif; /*Font*/
-  background-color: #1b1c1b; /*Font*/
-  background-color: #1b1c1b; /*Font*/
-}
+
+
 .navbar a,
 .navbar a:link,
 .navbar a:visited,
@@ -215,7 +217,8 @@ body {
 /* Box styling for About + Contact */
 .about-text,
 .about-links {
-  background: rgba(79, 93, 74, 0.4); /* olive tint */
+  background: rgba(79, 93, 74, 0.28);
+  backdrop-filter: blur(2px); /* olive tint */
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 2rem;
   border-radius: 6px; /* sharp corners */
@@ -413,7 +416,8 @@ body {
 
 
 .project-card {
-  background: rgba(79, 93, 74, 0.4); /* olive-tinted translucency */
+  background: rgba(79, 93, 74, 0.28);
+backdrop-filter: blur(2px); /* olive-tinted translucency */
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 6px;
 
