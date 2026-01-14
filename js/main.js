@@ -19,7 +19,7 @@ const projects = [
     image: "assets/images/circuit-background.jpg",
     repo: "https://github.com/GoldenPrad/Site",
     repoPrivate: false,   // true → private repo styling
-    demo: "http://127.0.0.1:5500/home.html",  // empty string or null → no demo button
+    demo: "https://goldenprad.github.io/Portfolio/",  // empty string or null → no demo button
     tags: ["HTML", "CSS", "JavaScript"]
   },
  {
